@@ -32,7 +32,7 @@ pkg install git
 </details>
 
 <details>
-  <summary>Erlang (v21+)</summary>
+  <summary>Erlang (v25+)</summary>
 
 ```bash
 pkg install erlang
@@ -41,7 +41,7 @@ pkg install erlang
 </details>
 
 <details>
-  <summary>Elixir (v1.12+)</summary>
+  <summary>Elixir (v1.16+)</summary>
 
 ```bash
 pkg install elixir
@@ -94,11 +94,11 @@ echo mosquitto_enable="yes" >> /etc/rc.conf
 </details>
 
 <details>
-  <summary>Node.js (v16+)</summary>
+  <summary>Node.js (v20+)</summary>
 
 ```bash
-pkg install node
-pkg install npm-node20-10.2.0
+pkg install node20-20.18.1
+pkg install npm-node20-10.9.0
 ```
 
 </details>

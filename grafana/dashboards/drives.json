@@ -1,44 +1,9 @@
 {
-  "__elements": {},
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "11.2.3"
-    },
-    {
-      "type": "datasource",
-      "id": "grafana-postgresql-datasource",
-      "name": "PostgreSQL",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "stat",
-      "name": "Stat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
-        "$$hashKey": "object:24",
         "builtIn": 1,
         "datasource": "-- Grafana --",
-        "definition": "TeslaMate|U2FsdGVkX1/cEWK+8cz7pjEKXtzJnDN7b21ZDXt1MGneFGPWTLqOPtxKmu02mJPLzi/f29I+NBHd3vi0FB8R4Xn0+GtobWDgk6VAVSBTdSNniOKO8i2WPlhRaOsl2+hG7gnZ7wrf1Th2nxR7f1uYCrbwOek0IzkfLzrkjh7gkr6inT6bbDuJqrmogZajLxmAMrQ6V+/vHxBRGiwjJhgiEeq3hM1q2h04JKkNiZ8RHbsF5Cd/xd8Q9u0JVrZzIrtnhM/SFlaApU7RtRMu8CSj1llTX7WEOj6VDZAMSf+XUAanWdk725kEPN9MNu89o2zEq5P3E3cju8IbbBdPzXLV3oVuzD6/tMnxFToIIV1E/BrpF7s2RtNa8+KJJ1PF8xgs6m+/KTD2hy+WsP0636AgObRAmYg7+qotGrgNvpNPdE0EgrB7WHYlV7R/1q66bcq6tCe51X1Un70k+zo+K6AK0o4B1H6IyMlEVuRH/Fz8QVl9aYu2ztd08RbuKJlYVKpkH+pxVETAO9MclYQ90tzE6TfwDZrQZzsAlMenr4s1ZB1OlFXjLjVjnddnUilzO76cqv4yI2THQEuyQ47nuVQ4gUbx02K59vMQhns3C01JOAYokOaSXe66Y7QYdMlk09Lf|aes-256-cbc",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -56,7 +21,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": null,
   "links": [
     {
       "icon": "dashboard",
@@ -76,7 +40,6 @@
       "type": "dashboards"
     }
   ],
-  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -132,7 +95,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Energy used:"
+                "value": "Total Energy consumed (net):"
               }
             ]
           }
@@ -163,7 +126,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.2.3",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "datasource": {
@@ -174,6 +137,7 @@
           "refId": "A"
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "filterFieldsByName",
@@ -263,7 +227,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.2.3",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "datasource": {
@@ -274,6 +238,7 @@
           "refId": "A"
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "filterFieldsByName",
@@ -331,11 +296,11 @@
             "properties": [
               {
                 "id": "unit",
-                "value": "none"
+                "value": "mi"
               },
               {
                 "id": "displayName",
-                "value": "Total Distance (mi):"
+                "value": "Total Distance logged:"
               }
             ]
           },
@@ -347,11 +312,11 @@
             "properties": [
               {
                 "id": "unit",
-                "value": "none"
+                "value": "km"
               },
               {
                 "id": "displayName",
-                "value": "Total Distance (km):"
+                "value": "Total Distance logged:"
               }
             ]
           }
@@ -382,7 +347,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.2.3",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "datasource": {
@@ -393,6 +358,7 @@
           "refId": "A"
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "filterFieldsByName",
@@ -456,7 +422,7 @@
               },
               {
                 "id": "displayName",
-                "value": "Average Consumption:"
+                "value": "Ø Consumption (net):"
               }
             ]
           },
@@ -472,7 +438,7 @@
               },
               {
                 "id": "displayName",
-                "value": "Average Consumption:"
+                "value": "Ø Consumption (net):"
               }
             ]
           }
@@ -501,7 +467,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.2.3",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "datasource": {
@@ -512,6 +478,7 @@
           "refId": "A"
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "filterFieldsByName",
@@ -584,7 +551,7 @@
             "mode": "thresholds"
           },
           "custom": {
-            "align": "center",
+            "align": "auto",
             "cellOptions": {
               "type": "auto"
             },
@@ -624,13 +591,9 @@
                   {
                     "targetBlank": false,
                     "title": "View drive details",
-                    "url": "d/zm7wN6Zgz/drive-details?from=${__data.fields.start_date_ts.numeric}&to=${__data.fields.end_date_ts.numeric}&var-car_id=${__data.fields.car_id.numeric}&var-drive_id=${__data.fields.drive_id.numeric}"
+                    "url": "/d/zm7wN6Zgz/drive-details?from=${__data.fields.start_date_ts.numeric}&to=${__data.fields.end_date_ts.numeric}&var-car_id=${__data.fields.car_id.numeric}&var-drive_id=${__data.fields.drive_id.numeric}"
                   }
                 ]
-              },
-              {
-                "id": "custom.align",
-                "value": "auto"
               },
               {
                 "id": "custom.minWidth",
@@ -646,19 +609,15 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Consumption"
+                "value": "Ø Consumption (net)"
               },
               {
                 "id": "unit",
                 "value": "Wh/km"
               },
               {
-                "id": "custom.align",
-                "value": "center"
-              },
-              {
                 "id": "custom.minWidth",
-                "value": 120
+                "value": 165
               }
             ]
           },
@@ -670,19 +629,15 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Consumption"
+                "value": "Ø Consumption (net)"
               },
               {
                 "id": "unit",
                 "value": "Wh/mi"
               },
               {
-                "id": "custom.align",
-                "value": "center"
-              },
-              {
                 "id": "custom.minWidth",
-                "value": 120
+                "value": 165
               }
             ]
           },
@@ -705,9 +660,6 @@
                 "value": 1
               },
               {
-                "id": "custom.align"
-              },
-              {
                 "id": "custom.minWidth",
                 "value": 90
               }
@@ -721,7 +673,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "kWh"
+                "value": "Energy consumed (net)"
               },
               {
                 "id": "unit",
@@ -730,10 +682,6 @@
               {
                 "id": "decimals",
                 "value": 1
-              },
-              {
-                "id": "custom.align",
-                "value": "center"
               },
               {
                 "id": "custom.cellOptions",
@@ -763,7 +711,7 @@
               },
               {
                 "id": "custom.minWidth",
-                "value": 80
+                "value": 180
               }
             ]
           },
@@ -786,10 +734,6 @@
                     "url": "${base_url:raw}/geo-fences/${__data.fields.start_path}"
                   }
                 ]
-              },
-              {
-                "id": "custom.align",
-                "value": "auto"
               },
               {
                 "id": "custom.minWidth",
@@ -818,10 +762,6 @@
                 ]
               },
               {
-                "id": "custom.align",
-                "value": "auto"
-              },
-              {
                 "id": "custom.minWidth",
                 "value": 200
               }
@@ -840,9 +780,6 @@
               {
                 "id": "unit",
                 "value": "celsius"
-              },
-              {
-                "id": "custom.align"
               },
               {
                 "id": "decimals",
@@ -895,9 +832,6 @@
                 "value": "m"
               },
               {
-                "id": "custom.align"
-              },
-              {
                 "id": "decimals",
                 "value": 1
               },
@@ -924,27 +858,46 @@
               {
                 "id": "custom.cellOptions",
                 "value": {
-                  "mode": "basic",
+                  "mode": "lcd",
                   "type": "gauge"
                 }
               },
               {
-                "id": "custom.align",
-                "value": "center"
-              },
-              {
                 "id": "max",
-                "value": 1
+                "value": 1.25
               },
               {
                 "id": "color",
                 "value": {
-                  "mode": "continuous-RdYlGr"
+                  "mode": "thresholds"
                 }
               },
               {
                 "id": "custom.minWidth",
-                "value": 90
+                "value": 120
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "super-light-orange",
+                      "value": null
+                    },
+                    {
+                      "color": "light-orange",
+                      "value": 0.65
+                    },
+                    {
+                      "color": "green",
+                      "value": 0.99
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "decimals"
               }
             ]
           },
@@ -954,17 +907,6 @@
               "options": "/.*_ts/"
             },
             "properties": [
-              {
-                "id": "unit",
-                "value": "short"
-              },
-              {
-                "id": "decimals",
-                "value": 2
-              },
-              {
-                "id": "custom.align"
-              },
               {
                 "id": "custom.hidden",
                 "value": true
@@ -979,14 +921,11 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Speed"
+                "value": "Ø Speed"
               },
               {
                 "id": "unit",
                 "value": "velocitykmh"
-              },
-              {
-                "id": "custom.align"
               },
               {
                 "id": "decimals",
@@ -1004,17 +943,6 @@
               "options": "id"
             },
             "properties": [
-              {
-                "id": "unit",
-                "value": "short"
-              },
-              {
-                "id": "decimals",
-                "value": 2
-              },
-              {
-                "id": "custom.align"
-              },
               {
                 "id": "custom.hidden",
                 "value": true
@@ -1040,9 +968,6 @@
                 "value": 1
               },
               {
-                "id": "custom.align"
-              },
-              {
                 "id": "custom.minWidth",
                 "value": 90
               }
@@ -1061,9 +986,6 @@
               {
                 "id": "unit",
                 "value": "fahrenheit"
-              },
-              {
-                "id": "custom.align"
               },
               {
                 "id": "decimals",
@@ -1109,14 +1031,11 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Speed"
+                "value": "Ø Speed"
               },
               {
                 "id": "unit",
                 "value": "velocitymph"
-              },
-              {
-                "id": "custom.align"
               },
               {
                 "id": "decimals",
@@ -1143,15 +1062,12 @@
                 "value": "velocitymph"
               },
               {
-                "id": "custom.align"
-              },
-              {
                 "id": "decimals",
                 "value": 0
               },
               {
-                "id": "custom.width",
-                "value": 90
+                "id": "custom.minWidth",
+                "value": 95
               }
             ]
           },
@@ -1170,15 +1086,12 @@
                 "value": "velocitykmh"
               },
               {
-                "id": "custom.align"
-              },
-              {
                 "id": "decimals",
                 "value": 0
               },
               {
-                "id": "custom.width",
-                "value": 90
+                "id": "custom.minWidth",
+                "value": 95
               }
             ]
           },
@@ -1188,17 +1101,6 @@
               "options": "/(start|end)_path/"
             },
             "properties": [
-              {
-                "id": "unit",
-                "value": "short"
-              },
-              {
-                "id": "decimals",
-                "value": 2
-              },
-              {
-                "id": "custom.align"
-              },
               {
                 "id": "custom.hidden",
                 "value": true
@@ -1212,17 +1114,6 @@
             },
             "properties": [
               {
-                "id": "unit",
-                "value": "short"
-              },
-              {
-                "id": "decimals",
-                "value": 2
-              },
-              {
-                "id": "custom.align"
-              },
-              {
                 "id": "custom.hidden",
                 "value": true
               }
@@ -1234,17 +1125,6 @@
               "options": "car_id"
             },
             "properties": [
-              {
-                "id": "unit",
-                "value": "short"
-              },
-              {
-                "id": "decimals",
-                "value": 2
-              },
-              {
-                "id": "custom.align"
-              },
               {
                 "id": "custom.hidden",
                 "value": true
@@ -1262,15 +1142,12 @@
                 "value": "percent"
               },
               {
-                "id": "custom.align"
-              },
-              {
                 "id": "decimals",
                 "value": 0
               },
               {
                 "id": "custom.minWidth",
-                "value": 76
+                "value": 75
               }
             ]
           },
@@ -1283,9 +1160,6 @@
               {
                 "id": "unit",
                 "value": "percent"
-              },
-              {
-                "id": "custom.align"
               },
               {
                 "id": "decimals",
@@ -1339,7 +1213,7 @@
               },
               {
                 "id": "custom.minWidth",
-                "value": 5
+                "value": 50
               }
             ]
           },
@@ -1349,17 +1223,6 @@
               "options": "drive_id"
             },
             "properties": [
-              {
-                "id": "unit",
-                "value": "short"
-              },
-              {
-                "id": "decimals",
-                "value": 2
-              },
-              {
-                "id": "custom.align"
-              },
               {
                 "id": "custom.hidden",
                 "value": true
@@ -1379,9 +1242,6 @@
               {
                 "id": "unit",
                 "value": "kwatt"
-              },
-              {
-                "id": "custom.align"
               },
               {
                 "id": "custom.minWidth",
@@ -1412,7 +1272,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "11.2.3",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "alias": "",
@@ -1481,9 +1341,9 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "TeslaMate"
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
       },
       "gridPos": {
         "h": 2,
@@ -1501,41 +1361,8 @@
         "content": "From here you can check if you have \nincomplete data of **Drives** (drives without ending date)\nIf so, you may follow the official \nguide by <a href='https://docs.teslamate.org/docs/maintenance/manually_fixing_data' target='_blank'>Manually fixing data</a>",
         "mode": "markdown"
       },
-      "pluginVersion": "11.2.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "TeslaMate"
-          },
-          "format": "time_series",
-          "group": [],
-          "metricColumn": "none",
-          "rawQuery": false,
-          "rawSql": "SELECT\n  start_date AS \"time\",\n  start_km\nFROM drives\nWHERE\n  $__timeFilter(start_date)\nORDER BY 1",
-          "refId": "A",
-          "select": [
-            [
-              {
-                "params": [
-                  "start_km"
-                ],
-                "type": "column"
-              }
-            ]
-          ],
-          "table": "drives",
-          "timeColumn": "start_date",
-          "timeColumnType": "timestamp",
-          "where": [
-            {
-              "name": "$__timeFilter",
-              "params": [],
-              "type": "macro"
-            }
-          ]
-        }
-      ],
+      "pluginVersion": "11.3.1",
+      "title": "",
       "type": "text"
     },
     {
@@ -1562,8 +1389,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           }
@@ -1590,7 +1416,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "11.2.3",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "alias": "",
@@ -1629,7 +1455,9 @@
       "type": "table"
     }
   ],
-  "schemaVersion": 39,
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 40,
   "tags": [
     "tesla"
   ],
@@ -1642,21 +1470,14 @@
           "uid": "TeslaMate"
         },
         "definition": "SELECT\n    id as __value,\n    CASE WHEN COUNT(id) OVER (PARTITION BY name) > 1 AND name IS NOT NULL THEN CONCAT(name, ' - ', RIGHT(vin, 6)) ELSE COALESCE(name, CONCAT('VIN ', vin)) end as __text \nFROM cars\nORDER BY display_priority ASC, name ASC, vin ASC;",
-        "hide": 0,
         "includeAll": false,
         "label": "Car",
-        "multi": false,
         "name": "car_id",
         "options": [],
         "query": "SELECT\n    id as __value,\n    CASE WHEN COUNT(id) OVER (PARTITION BY name) > 1 AND name IS NOT NULL THEN CONCAT(name, ' - ', RIGHT(vin, 6)) ELSE COALESCE(name, CONCAT('VIN ', vin)) end as __text \nFROM cars\nORDER BY display_priority ASC, name ASC, vin ASC;",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "type": "query"
       },
       {
         "allValue": "-1",
@@ -1667,7 +1488,6 @@
         },
         "definition": "SELECT name AS __text, id AS __value FROM geofences ORDER BY name COLLATE \"C\" ASC;",
         "description": "Start or Destination Geofence",
-        "hide": 0,
         "includeAll": true,
         "label": "Geofence",
         "multi": true,
@@ -1676,18 +1496,14 @@
         "query": "SELECT name AS __text, id AS __value FROM geofences ORDER BY name COLLATE \"C\" ASC;",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
         "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "",
           "value": ""
         },
         "description": "Type a text contained in Start or Destination Location ",
-        "hide": 0,
         "label": "Location",
         "name": "location",
         "options": [
@@ -1698,7 +1514,6 @@
           }
         ],
         "query": "",
-        "skipUrlSync": false,
         "type": "textbox"
       },
       {
@@ -1711,18 +1526,12 @@
         "hide": 2,
         "includeAll": false,
         "label": "temperature unit",
-        "multi": false,
         "name": "temp_unit",
         "options": [],
         "query": "select unit_of_temperature from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "type": "query"
       },
       {
         "current": {},
@@ -1734,18 +1543,12 @@
         "hide": 2,
         "includeAll": false,
         "label": "length unit",
-        "multi": false,
         "name": "length_unit",
         "options": [],
         "query": "select unit_of_length from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "type": "query"
       },
       {
         "current": {},
@@ -1756,19 +1559,12 @@
         "definition": "select preferred_range from settings limit 1;",
         "hide": 2,
         "includeAll": false,
-        "label": "",
-        "multi": false,
         "name": "preferred_range",
         "options": [],
         "query": "select preferred_range from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "type": "query"
       },
       {
         "current": {},
@@ -1779,48 +1575,45 @@
         "definition": "select base_url from settings limit 1;",
         "hide": 2,
         "includeAll": false,
-        "label": "",
-        "multi": false,
         "name": "base_url",
         "options": [],
         "query": "select base_url from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "type": "query"
       },
       {
         "current": {
-          "selected": false,
           "text": "0",
           "value": "0"
         },
-        "hide": 0,
-        "includeAll": false,
         "label": "Distance >=",
         "name": "min_dist",
-        "options": [],
+        "options": [
+          {
+            "selected": true,
+            "text": "0",
+            "value": "0"
+          }
+        ],
         "query": "0",
-        "skipUrlSync": false,
         "type": "textbox"
       },
       {
         "current": {
-          "selected": false,
           "text": "0",
           "value": "0"
         },
-        "hide": 0,
-        "includeAll": false,
         "label": "Speed >=",
         "name": "min_speed",
-        "options": [],
+        "options": [
+          {
+            "selected": true,
+            "text": "0",
+            "value": "0"
+          }
+        ],
         "query": "0",
-        "skipUrlSync": false,
         "type": "textbox"
       }
     ]
@@ -1829,31 +1622,7 @@
     "from": "now-3M",
     "to": "now"
   },
-  "timepicker": {
-    "refresh_intervals": [
-      "5s",
-      "10s",
-      "30s",
-      "1m",
-      "5m",
-      "15m",
-      "30m",
-      "1h",
-      "2h",
-      "1d"
-    ],
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ]
-  },
+  "timepicker": {},
   "timezone": "",
   "title": "Drives",
   "uid": "Y8upc6ZRk",

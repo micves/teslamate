@@ -6,7 +6,52 @@
 
 ### Improvements and bug fixes
 
+- fix(nix): wait for mosquitto to start before starting teslamate (#4419 - @brianmay)
+- feat: use Grafana 11.4.0 (#4299 - @swiffer)
+- feat: improve logging messages (#4467 - @micves and @brianmay)
+
+#### Build, CI, internal
+
+- build(deps): bump castore from 1.0.9 to 1.0.10 (#4414)
+- build(deps): bump @docusaurus/preset-classic from 3.5.2 to 3.6.3 in /website (#4412)
+- build(deps): bump path-to-regexp from 1.8.0 to 1.9.0 in /website (#4424)
+- build(deps): bump crate-ci/typos from 1.27.0 to 1.28.1 (#4411)
+- build(deps): bump tesla from 1.13.0 to 1.13.2 (#4416)
+- build(deps): bump postgrex from 0.19.1 to 0.19.3 (#4415)
+- build(nix): switch to nixos-24.11 (#4420 - @brianmay)
+- build(deps): update flake.lock (#4427)
+- fix: update mix deps hash to fix build error on recent NixOS 24.11 update (#4428)
+- build(deps): bump path-to-regexp and express in /website (#4433)
+- build(deps): update flake.lock (#4440)
+- build(deps): bump actions/cache from 4.1.2 to 4.2.0 (#4465)
+- build(deps): bump phoenix from 1.7.14 to 1.7.18 (#4462)
+- build(deps-dev): bump dialyxir from 1.4.4 to 1.4.5 (#4460)
+- build(deps): bump ex_cldr from 2.40.1 to 2.40.2 (#4461)
+- build(deps): bump crate-ci/typos from 1.28.1 to 1.29.0 (#4464)
+
+#### Dashboards
+
+- fix: for battery health dashboard erroring out if no charge data has been collected so far (#4448 - @swiffer)
+- fix: url for releases in home dashboard (#4452 -@FLX3009)
+
+#### Translations
+
+#### Documentation
+
+- doc: bump elixir based on availability (#4431 - @swiffer)
+- doc: align node req with what is used in CI (#4430 - @swiffer)
+
+## [1.32.0] - 2024-11-23
+
+As always, there are many improvements. The focus has been on quality of life improvements and standardization across all dashboards. Enjoy it.
+
+### New features
+
+### Improvements and bug fixes
+
 - feat: use Grafana 11.2.3 (#4338 - @swiffer)
+- feat: Update marketing name to recognize Model S LR+ (#4370 - @cwanja)
+- fix(nix): bump hash for dependencies (#4371 - @brianmay)
 
 #### Build, CI, internal
 
@@ -17,6 +62,12 @@
 - build(deps): bump tesla from 1.12.1 to 1.13.0 (#4335)
 - build(deps): bump floki from 0.36.2 to 0.36.3 (#4336)
 - feat: add CONTRIBUTING file to exclusion lists for treefmt (#4359 - @JakobLichterfeld)
+- ci: create PR to update flake.lock every saturday (#4372 - @brianmay)
+- ci(fix): correct permissions for flake.lock updates ([c673ef3](https://github.com/teslamate-org/teslamate/commit/c673ef363ba73ad076680d71ef54bd549582d41f)- @JakobLichterfeld)
+- ci: update flake.lock workflow with appropriate labels for created pr's ([54c41c1](https://github.com/teslamate-org/teslamate/commit/54c41c1fe66664b62d817502d1b2bdb244b70dc2) - @JakobLichterfeld)
+- build(deps): bump cross-spawn from 7.0.3 to 7.0.6 in /website (#4391)
+- build(deps): bump crate-ci/typos from 1.26.0 to 1.27.0 (#4344)
+- build(deps): update flake.lock (#4381)
 
 #### Dashboards
 
@@ -26,6 +77,8 @@
 - feat: add a welcome dashboard (#4338 - @swiffer)
 - fix: Charges Dashboard -> Range added renamed to Ø Charge rate (#4349 - @swiffer)
 - fix: Axis Labels for XY Chart in Battery Health and reduces Query count in Visited (#4364 - @swiffer)
+- feat: Dashboard refinements and standardization (#4367 - @swiffer)
+- feat: add Detailed Energy Use to drive-details (#4386 - @jameskitt616)
 
 #### Translations
 
@@ -34,6 +87,7 @@
 docs: add contributing guidelines link for GitHub (#4345 - @JakobLichterfeld)
 docs: update Home Assistant integration documentation with configuration URL and model name hints (#4359 - @JakobLichterfeld)
 docs: Remove availability from Home Assistant MQTT sensors, as it can be misleading and prevent sensors from receiving updated values (#4362 - @longzheng)
+docs: Introducing TeslaMate Guru on Gurubase.io (#4390 - @kursataktas)
 
 ## [1.31.1] - 2024-10-29
 
@@ -2231,7 +2285,8 @@ New users need to sign in via the web interface.
 
 ## [1.0.0] - 2019-07-25
 
-[unreleased]: https://github.com/teslamate-org/teslamate/compare/v1.31.1...HEAD
+[unreleased]: https://github.com/teslamate-org/teslamate/compare/v1.32.0...HEAD
+[1.32.0]: https://github.com/teslamate-org/teslamate/compare/v1.31.1...v1.32.0
 [1.31.1]: https://github.com/teslamate-org/teslamate/compare/v1.31.0...v1.31.1
 [1.31.0]: https://github.com/teslamate-org/teslamate/compare/v1.30.1...v1.31.0
 [1.30.1]: https://github.com/teslamate-org/teslamate/compare/v1.30.0...v1.30.1

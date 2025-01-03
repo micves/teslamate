@@ -24,7 +24,7 @@ Source: [postgresql.org/download](https://www.postgresql.org/download/)
 </details>
 
 <details>
-  <summary>Elixir (v1.12+)</summary>
+  <summary>Elixir (v1.16+)</summary>
 
 ```bash
 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
@@ -32,12 +32,12 @@ sudo apt-get update
 sudo apt-get install -y elixir esl-erlang
 ```
 
-Source: [elixir-lang.org/install](https://elixir-lang.org/install)
+Source: [erlang.org/downloads](https://www.erlang.org/downloads#prebuilt)
 
 </details>
 
 <details>
-  <summary>Grafana (v11.2.3+)</summary>
+  <summary>Grafana (v11.4.0+)</summary>
 
 ```bash
 sudo apt-get install -y apt-transport-https software-properties-common
@@ -67,14 +67,14 @@ Source: [mosquitto.org/download](https://mosquitto.org/download/)
 </details>
 
 <details>
-  <summary>Node.js (v14+)</summary>
+  <summary>Node.js (v20+)</summary>
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 sudo apt-get install -y nodejs
 ```
 
-Source: [nodejs.org/en/download/package-manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages)
+Source: [nodejs.org/en/download/package-manager](https://nodejs.org/en/download/package-manager/all#debian-and-ubuntu-based-linux-distributions)
 
 </details>
 
