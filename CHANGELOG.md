@@ -9,6 +9,13 @@
 - fix(nix): wait for mosquitto to start before starting teslamate (#4419 - @brianmay)
 - feat: use Grafana 11.4.0 (#4299 - @swiffer)
 - feat: improve logging messages (#4467 - @micves and @brianmay)
+- feat: optimize state transitions (#4473 - @micves and @brianmay)
+  - don't try to sleep if power > 0
+  - cancel an ongoing suspended state/trying to sleep and go back to online
+  - add conditions to enter charging
+- feat: support accessing PostgreSQL on unix domain sockets (#4456 - @j-baker)
+- fix(nix): temporarily disable browser locale in date formats for nix deployment as well (#4480 - @swiffer)
+- feat: Grafana 11.5.0 (#4509 - @swiffer)
 
 #### Build, CI, internal
 
@@ -28,11 +35,19 @@
 - build(deps-dev): bump dialyxir from 1.4.4 to 1.4.5 (#4460)
 - build(deps): bump ex_cldr from 2.40.1 to 2.40.2 (#4461)
 - build(deps): bump crate-ci/typos from 1.28.1 to 1.29.0 (#4464)
+- ci: update actions/cache to v4.2.0 ([79107d5](https://github.com/teslamate-org/teslamate/commit/79107d53b7712934587bbe40c503e63d5dd9f122) - @JakobLichterfeld)
+- build(deps): bump DeterminateSystems/magic-nix-cache-action from 8 to 9 (#4515)
+- build(deps): bump actions/stale from 9.0.0 to 9.1.0 (#4516)
+- build(deps): bump crate-ci/typos from 1.29.0 to 1.29.5 (#4514)
+- build(deps-dev): bump excoveralls from 0.18.3 to 0.18.5 (#4524)
+- build(deps-dev): bump credo from 1.7.8 to 1.7.11 (#4523)
+- build(deps): bump @docusaurus/preset-classic from 3.6.3 to 3.7.0 in /website (#4518)
 
 #### Dashboards
 
 - fix: for battery health dashboard erroring out if no charge data has been collected so far (#4448 - @swiffer)
 - fix: url for releases in home dashboard (#4452 -@FLX3009)
+- feat: add 0 as lower bound for gauge to ensure proper scaling (#4498 - @swiffer)
 
 #### Translations
 
@@ -40,6 +55,10 @@
 
 - doc: bump elixir based on availability (#4431 - @swiffer)
 - doc: align node req with what is used in CI (#4430 - @swiffer)
+- doc: added missing topic "charging_state" in mqtt doc (#4466 - @Beme99)
+- docs: Grafana 11.4 for manual install on FreeBSD (#4474 - @swiffer)
+- doc: Fixing typo for sensor psi calculation (#4470 - @Phazz)
+- doc: Simplify Home Assistant sensors, add device_class to allow changing measurement units (#4472 - @longzheng)
 
 ## [1.32.0] - 2024-11-23
 
