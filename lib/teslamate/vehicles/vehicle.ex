@@ -547,15 +547,27 @@ defmodule TeslaMate.Vehicles.Vehicle do
             :keep_state_and_data
         end
 
-      %Stream.Data{power: power} when is_number(power) ->
+      %Stream.Data{power: power, shift_state: shift_state} when is_number(power) ->
         Logger.debug(inspect(stream_data), car_id: data.car.id)
 
         case data do
           %Data{fake_online_state: fake_online_state}
           when is_number(fake_online_state) and fake_online_state in [1, 2] ->
-            Logger.info("Real online detected: power is a number", car_id: data.car.id)
-            # fetch now and go through regular :start -> :online by setting fake_online_state=3
-            {:keep_state, %Data{data | fake_online_state: 3}, schedule_fetch(0, data)}
+
+            if not is_nil(shift_state) or power > 0 or power < 0 do
+              Logger.info("Real online: power shows activity or shift_state is not nil", car_id: data.car.id)
+              # fetch now and go through regular :start -> :online by setting fake_online_state=3
+              {:keep_state, %Data{data | fake_online_state: 3}, schedule_fetch(0, data)}
+            else
+              if fake_online_state == 1 do
+                Logger.info("Fake online: power is a number and 0 but shift_state is nil", car_id: data.car.id)
+              end
+
+              # Partially update the vehicle to reflect battery drop without corrupting drive_state
+              vehicle = merge(data.last_response, stream_data)
+
+              {:keep_state, %Data{data | fake_online_state: 2, last_response: vehicle}, broadcast_summary()}
+            end
 
           %Data{fake_online_state: 0} ->
             Logger.warning(
@@ -1766,20 +1778,22 @@ defmodule TeslaMate.Vehicles.Vehicle do
       | drive_state: %Drive{
           vehicle.drive_state
           | timestamp: timestamp,
-            latitude: stream_data.est_lat,
-            longitude: stream_data.est_lng,
-            speed: stream_data.speed,
-            power: stream_data.power,
-            heading: stream_data.est_heading,
-            shift_state: stream_data.shift_state
+            latitude: stream_data.est_lat || vehicle.drive_state.latitude,
+            longitude: stream_data.est_lng || vehicle.drive_state.longitude,
+            speed: stream_data.speed || vehicle.drive_state.speed,
+            power: stream_data.power || vehicle.drive_state.power,
+            heading: stream_data.est_heading || vehicle.drive_state.heading,
+            shift_state: stream_data.shift_state || vehicle.drive_state.shift_state
         },
         charge_state: %Charge{
           vehicle.charge_state
-          | battery_level: stream_data.soc
+          | battery_level: stream_data.soc || vehicle.charge_state.battery_level,
+            battery_range: stream_data.range || vehicle.charge_state.battery_range,
+            est_battery_range: stream_data.est_range || vehicle.charge_state.est_battery_range
         },
         vehicle_state: %VehicleState{
           vehicle.vehicle_state
-          | odometer: stream_data.odometer
+          | odometer: stream_data.odometer || vehicle.vehicle_state.odometer
         }
     }
   end
